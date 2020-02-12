@@ -67,14 +67,14 @@ public class main {
 				for (int r = 0;r < erow1.size(); r++) {
 				   	JSONObject jsoRecord = new JSONObject();
 			     	Elements ecols = erow1.get(r).select("td");
-		            String Tech = ecols.get(0).text();
-		            String Use = ecols.get(1).text();
-			        String Reason = ecols.get(2).text();
-		            String Lifecycle = ecols.get(3).text();
-		            jsoRecord.put("Tech", Tech);
-		            jsoRecord.put("Use", Use);
-		            jsoRecord.put("Reason", Reason);
-		            jsoRecord.put("Lifecycle", Lifecycle);
+		            String strTech = ecols.get(0).text();
+		            String strUse = ecols.get(1).text();
+			        String strReason = ecols.get(2).text();
+		            String strLifecycle = ecols.get(3).text();
+		            jsoRecord.put("Tech", strTech);
+		            jsoRecord.put("Use", strUse);
+		            jsoRecord.put("Reason", strReason);
+		            jsoRecord.put("Lifecycle", strLifecycle);
 		            jarrHtml1.put(jsoRecord);
 	        }
 			//Converting data for Infrastructure to json
@@ -84,12 +84,12 @@ public class main {
 		        for (int r = 0; r < erow2.size(); r++) {
 		            JSONObject jsoRecord = new JSONObject();
 		        	Elements ecols = erow2.get(r).select("td");
-		        	String Tech = ecols.get(0).text();
-		            String Use = ecols.get(1).text();
-		            String Empty = ecols.get(2).text();
-		            jsoRecord.put("Tech", Tech);
-		            jsoRecord.put("Use", Use);
-		            jsoRecord.put(" ", Empty);
+		        	String strTech = ecols.get(0).text();
+		            String strUse = ecols.get(1).text();
+		            String strEmpty = ecols.get(2).text();
+		            jsoRecord.put("Tech", strTech);
+		            jsoRecord.put("Use", strUse);
+		            jsoRecord.put(" ", strEmpty);
 		            jarrHtml2.put(jsoRecord);
 	        }
 					    
